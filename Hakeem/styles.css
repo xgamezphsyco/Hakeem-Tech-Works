@@ -1,0 +1,197 @@
+/* General Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container for main content */
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    width: 100%;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    margin-top: 30px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    background: linear-gradient(135deg, #0078d7, #00aaff);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 120, 215, 0.6);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+/* Navigation buttons */
+nav {
+    margin-top: 15px;
+}
+
+.nav-btn {
+    display: inline-block;
+    background-color: #0078d7;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 120, 215, 0.4);
+}
+
+.nav-btn:hover {
+    background-color: #005fa3;
+}
+
+/* Form section */
+.request-form-section h2,
+.contact-section h2,
+.welcome-section h2,
+.exit-section h2 {
+    margin-bottom: 20px;
+    color: #222;
+    border-bottom: 3px solid #0078d7;
+    padding-bottom: 8px;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #0078d7;
+    outline: none;
+}
+
+/* Button styles */
+button, .btn {
+    background-color: #0078d7;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 120, 215, 0.4);
+}
+
+button:hover, .btn:hover {
+    background-color: #005fa3;
+}
+
+/* Contact section */
+.contact-section {
+    margin-top: 40px;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.contact-section p {
+    margin-bottom: 10px;
+}
+
+/* Welcome and Exit sections */
+.welcome-section, .exit-section {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Fade-in and fade-out animations */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    main {
+        padding: 20px 25px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .nav-btn {
+        margin: 5px 5px;
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}

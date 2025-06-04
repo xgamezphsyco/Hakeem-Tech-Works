@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ICT Services Request</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="fade-in">
+    <header>
+        <h1>Welcome to Hakeem's Tech Works ICT Services</h1>
+        <p>Your one-stop solution for all ICT service requests</p>
+        <nav>
+            <a href="Welcome.html" class="nav-btn">Welcome Page</a>
+            <a href="Exit.html" class="nav-btn">Exit Page</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="request-form-section">
+            <h2>Request an ICT Service</h2>
+            <form id="serviceRequestForm" action="https://formspree.io/f/xldneqey" method="POST" onsubmit="return showConfirmation(event)">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" />
+
+                <label for="serviceDetails">Service Details:</label>
+                <textarea id="serviceDetails" name="serviceDetails" rows="5" required></textarea>
+
+                <button type="submit">Submit Request</button>
+            </form>
+            <p id="confirmationMessage" style="display:none; color: green; font-weight: bold; margin-top: 15px;">Thank you for your request! We will get back to you soon.</p>
+        </section>
+
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Phone: +254 715279747</p>
+            <p>Email: mwitigitonga36@gmail.com</p>
+            <p>Address: 1715-60200 MERU, Kenya</p>
+        </section>
+    </main>
+
+    <script>
+        function showConfirmation(event) {
+            event.preventDefault();
+            document.getElementById('confirmationMessage').style.display = 'block';
+            document.body.classList.add('fade-out');
+            setTimeout(function() {
+                window.location.href = 'Exit.html';
+            }, 2000);
+            return false;
+        }
+    </script>
+</body>
+</html>
